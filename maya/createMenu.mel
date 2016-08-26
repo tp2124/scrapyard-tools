@@ -1,0 +1,31 @@
+global proc exportStaticMesh()
+{
+    python("import sy_Exporter as export");
+    python("reload(export)");
+    python("export.exportStaticMesh()");
+}
+
+global proc exportSkeletalMesh()
+{
+    python("import sy_Exporter as export");
+    python("reload(export)");
+    python("export.exportSkeletalMesh()");
+}
+
+global proc exportAnimation()
+{
+    python("import sy_Exporter as export");
+    python("reload(export)");
+    python("export.exportAnimation()");
+}
+
+
+global string $gMainWindow;
+setParent $gMainWindow;
+global string $gScrapyardMenu = "Scrapyard";
+menu -label "Scrapyard" -allowOptionBoxes true -tearOff true $gScrapyardMenu;
+menuItem -label "Make a sphere" -command "sphere"; 
+menuItem -label "Exporting" -tearOff true -subMenu true;
+menuItem -label "Static Mesh" -command "exportStaticMesh();";
+menuItem -label "Skeletal Mesh" -command "exportSkeletalMesh();";
+menuItem -label "Animation" -command "exportAnimation();";

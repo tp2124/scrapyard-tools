@@ -1,0 +1,32 @@
+global proc shelf_SY_Design () {
+    global string $gBuffStr;
+    global string $gBuffStr0;
+    global string $gBuffStr1;
+
+
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -enableBackground 0
+        -align "center" 
+        -label "HitBoxes" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.2 
+        -image "..\\icons\\des_hitBoxes.bmp" 
+        -image1 "..\\icons\\des_hitBoxes.bmp" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import HitBox_AttackBox as hitboxes\nreload(hitboxes)\n" 
+        -sourceType "python" 
+        -commandRepeatable 1
+    ;
+
+} 

@@ -1,0 +1,296 @@
+global proc shelf_SY_Art () {
+    global string $gBuffStr;
+    global string $gBuffStr0;
+    global string $gBuffStr1;
+
+
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -enableBackground 0
+        -align "center" 
+        -label "ZeroTransform_Move" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.25 
+        -image "..\\icons\\art_ZeroAndMove.bmp" 
+        -image1 "..\\icons\\art_ZeroAndMove.bmp" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import zeroObject as zero\nreload(zero)\nzero.zeroObject(1)\n" 
+        -sourceType "python" 
+        -commandRepeatable 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -enableBackground 0
+        -align "center" 
+        -label "ZeroTransform" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.25 
+        -image "..\\icons\\art_ZeroNoMove.bmp" 
+        -image1 "..\\icons\\art_ZeroNoMove.bmp" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import zeroObject as zero\nreload(zero)\nzero.zeroObject()\n" 
+        -sourceType "python" 
+        -commandRepeatable 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -enableBackground 0
+        -align "center" 
+        -label "AppendTransform_Front" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.25 
+        -image "..\\icons\\art_JointAppendFront.bmp" 
+        -image1 "..\\icons\\art_JointAppendFront.bmp" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import renamer as renamer\nreload(renamer)\nrenamer.appendName('front')\n" 
+        -sourceType "python" 
+        -commandRepeatable 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -enableBackground 0
+        -align "center" 
+        -label "AppendTransform_Back" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.25 
+        -image "..\\icons\\art_JointAppendEnd.bmp" 
+        -image1 "..\\icons\\art_JointAppendEnd.bmp" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import renamer as renamer\nreload(renamer)\nrenamer.appendName('end')\n" 
+        -sourceType "python" 
+        -commandRepeatable 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -enableBackground 0
+        -align "center" 
+        -label "AppendMeshes_Front" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.25 
+        -image "..\\icons\\art_MeshesAppendFront.bmp" 
+        -image1 "..\\icons\\art_MeshesAppendFront.bmp" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import renamer as tool\nreload(tool)\ntool.appendName('front', 'mesh')\n" 
+        -sourceType "python" 
+        -commandRepeatable 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -enableBackground 0
+        -align "center" 
+        -label "AppendMeshes_Back" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.25 
+        -image "..\\icons\\art_MeshesAppendEnd.bmp" 
+        -image1 "..\\icons\\art_MeshesAppendEnd.bmp" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import renamer as tool\nimport testModule\ntestModule.foo()\nreload(tool)\ntool.appendName('end', 'mesh')\n" 
+        -sourceType "python" 
+        -commandRepeatable 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -enableBackground 0
+        -align "center" 
+        -label "Temp_A" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.25 
+        -image "..\\icons\\art_CleanGeometry.bmp" 
+        -image1 "..\\icons\\art_CleanGeometry.bmp" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import cleanGeometry as tool\nreload(tool)\ntool.cleanGeometry()\n" 
+        -sourceType "python" 
+        -commandRepeatable 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -enableBackground 0
+        -align "center" 
+        -label "Temp_B" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.25 
+        -image "..\\icons\\art_CreateControls.bmp" 
+        -image1 "..\\icons\\art_CreateControls.bmp" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import skeletonControls as skeleControls\nreload(skeleControls)\nskeleControls.createSkeletonControls()\n" 
+        -sourceType "python" 
+        -commandRepeatable 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -enableBackground 0
+        -align "center" 
+        -label "Temp_A" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.25 
+        -image "..\\icons\\art_GameCamera.bmp" 
+        -image1 "..\\icons\\art_GameCamera.bmp" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import inGameCamera as gameCam\nreload(gameCam)\ngameCam.generateGameCamera()\n" 
+        -sourceType "python" 
+        -commandRepeatable 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -enableBackground 0
+        -align "center" 
+        -label "Temp_A" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.25 
+        -image "..\\icons\\art_A.bmp" 
+        -image1 "..\\icons\\art_A.bmp" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import renamer as tool\nreload(tool)\n" 
+        -sourceType "python" 
+        -commandRepeatable 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -enableBackground 0
+        -align "center" 
+        -label "Temp_B" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.25 
+        -image "..\\icons\\art_B.bmp" 
+        -image1 "..\\icons\\art_B.bmp" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import renamer as test\nreload(test)\n" 
+        -sourceType "python" 
+        -commandRepeatable 1
+    ;
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 35
+        -height 35
+        -manage 1
+        -visible 1
+        -preventOverride 0
+        -enableBackground 0
+        -align "center" 
+        -label "Temp_B" 
+        -labelOffset 0
+        -font "plainLabelFont" 
+        -overlayLabelColor 0.8 0.8 0.8 
+        -overlayLabelBackColor 0 0 0 0.25 
+        -image "..\\icons\\AnimGoogleDoc.bmp" 
+        -image1 "..\\icons\\AnimGoogleDoc.bmp" 
+        -style "iconOnly" 
+        -marginWidth 1
+        -marginHeight 1
+        -command "import pullUpAnimProg as animProg\nreload(animProg)\nanimProg.pullUpGoogleDoc()\n" 
+        -sourceType "python" 
+        -commandRepeatable 1
+    ;
+
+} 
