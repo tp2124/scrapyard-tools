@@ -22,7 +22,3 @@ The code is split up properly to allow for both a standalone version as well as 
 
 //utils/*
 Generic helper scripts used both inside and outside of Maya.
-
-//ScrapyardTray/...
-Basic Windows Forms tray icon that would allow for custom commands that were project specific.
-The next feature I would want to add to this is to make the commands be .xml driven to allow for easy adding of commands
